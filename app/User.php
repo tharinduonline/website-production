@@ -32,11 +32,6 @@ class User extends Authenticatable
         return $this->hasOne('App\Profile');
     }
 
-    public function GoogleUser()
-    {
-        return $this->hasMany('App\GoogleUser');
-    }
-
     // Specify Slack Webhook URL to route notifications to
     public function routeNotificationForSlack() {
         return env('SLACK_WEBHOOK_URL');
